@@ -1,0 +1,192 @@
+/*navbar*/
+.hoverable:before{
+  position:absolute;
+  pointer-events: none;
+  z-index:-1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height:10px;
+  width:90%;
+  opacity:0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  /* W3C */
+  transition-duration: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.hoverable:hover, .hoverable:active, .hoverable:focus{
+  transform: translateY(-5px);
+}
+.hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before{
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+
+
+
+
+.bounce {
+  animation-name: bounce-animation;
+  animation-duration: 2s;
+}
+
+
+.page-title {
+  opacity: .75 !important;
+}
+
+
+
+
+
+/*photos*/
+#photos {
+   /* Prevent vertical gaps */
+   line-height: 0;
+   
+   -webkit-column-count: 4;
+   -webkit-column-gap:   1px;
+   -moz-column-count:    4;
+   -moz-column-gap:      1px;
+   column-count:         5;
+   column-gap:           2px;
+}
+
+#photos img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+
+}
+
+@media (max-width: 1200px) {
+  #photos {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  #photos {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #photos {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #photos {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html{
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10%;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+
+
+
+
+
+
+.gradient{
+  background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%);
+  z-index: 2
+  height:3000px;
+}
+
+.blur{
+  
+}
+
+.navigation{
+  background-color: black;
+  
+  
+  height: 50px;
+  text-align: center;
+  margin-left: auto;
+  z-index: 2;
+}
+.grow{
+    z-index: -9;
+    transform: scale(1.1);
+    filter: blur(0px) grayscale(100%);
+    transition: 3s;
+    transition-delay: 0.2s;
+}
+.grow:hover{
+    transform: scale(1);
+    filter: blur(0px) ;
+    
+    
+
+
+
+}
+.displace{
+    transform: translateY(0px);
+    transition: 2s;
+    transition-delay: 0.1s;
+}
+.displace:hover{
+    transform: translateY(-200px);
+}
+
+.foot{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    transition: 1s;
+    color: white;
+    text-align: center;
+}
+.foot:hover{
+    height: 600px;
+}
